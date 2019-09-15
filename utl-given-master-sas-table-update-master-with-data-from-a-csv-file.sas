@@ -17,7 +17,26 @@ This is not as simple as you might think.
    3. I replace the entire observation on a match                                                                          
    4. I assume master is indexed on key.                                                                                   
    5. Transaction is unique on key.                                                                                        
-   6. Variables on transaction are same name, lenght and type as master                                                    
+   6. Variables on transaction are same name, lenght and type as master 
+   Recent comments                                                                               
+       
+Recent Comments       
+       
+I also don't think it possible with update, looping through the master dups is probelmsome.   
+                                                                                              
+I just found this.                                                                            
+                                                                                              
+http://support.sas.com/kb/24/786.html                                                         
+                                                                                              
+I don't think you need an index on the transaction, but I would index and sort the master.    
+                                                                                              
+My 'set point' seems to overwrite all the variables in the master. Whereas the SAS            
+solution seems to require a rename and manual coding for each variable.                       
+                                                                                              
+Updating and modifying in place can be very tricky.                                           
+                                                                                              
+                                                                                              
+
 *_                   _                                                                                                     
 (_)_ __  _ __  _   _| |_                                                                                                   
 | | '_ \| '_ \| | | | __|                                                                                                  
